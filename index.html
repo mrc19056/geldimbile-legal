@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Geldim Bile — Gizlilik Politikası / Privacy Policy</title>
-<meta name="description" content="Geldim Bile - Motokurye oyununun gizlilik politikası. Uygulama hiçbir kişisel veri toplamaz.">
+<meta name="description" content="Geldim Bile - Motokurye oyununun gizlilik politikası: misafir oyunda veri cihazdan çıkmaz; Google / Apple ile girişte hangi verilerin neden saklandığı ve hesabın nasıl silineceği.">
 <style>
   :root{
     --bg:#faf9f5; --fg:#1f2430; --muted:#5a6472; --line:#e2e0d8;
@@ -32,6 +32,7 @@
     background:var(--card); border:1px solid var(--line); border-radius:8px;
     font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13px;
   }
+  nav{margin-top:14px; font-size:14px}
   section{
     background:var(--card); border:1px solid var(--line);
     border-radius:16px; padding:22px 24px; margin-bottom:18px;
@@ -39,14 +40,15 @@
   h2{font-size:20px; margin:0 0 4px; padding-bottom:8px; border-bottom:2px solid var(--accent)}
   h3{font-size:16px; margin:22px 0 6px; color:var(--muted)}
   .big{
-    font-size:18px; font-weight:600; background:var(--accent-soft);
+    font-size:17px; font-weight:600; background:var(--accent-soft);
     border-left:4px solid var(--accent); border-radius:8px; padding:14px 16px; margin:16px 0;
   }
   ul{padding-left:20px; margin:10px 0}
   li{margin:5px 0}
+  .tablo{overflow-x:auto}
   table{width:100%; border-collapse:collapse; margin:12px 0; font-size:15px}
   th,td{text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top}
-  th{color:var(--muted); font-weight:600; width:34%}
+  th{color:var(--muted); font-weight:600}
   a{color:var(--accent)}
   footer{color:var(--muted); font-size:13px; text-align:center; margin-top:28px; line-height:1.8}
   .lang{
@@ -61,128 +63,163 @@
 <header>
   <h1>Geldim Bile — Motokurye</h1>
   <p class="sub">Gizlilik Politikası &middot; Privacy Policy</p>
-  <p class="sub">Son güncelleme / Last updated: <strong>3 Eylül 2026</strong></p>
+  <p class="sub">Son güncelleme / Last updated: <strong>6 Ekim 2026 / October 6, 2026</strong></p>
   <span class="pkg">com.miracdev.geldimbile</span>
+  <nav><a href="#tr">Türkçe</a> &middot; <a href="#en">English</a> &middot; <a href="hesap-sil.html">Hesabını sil / Delete your account</a></nav>
 </header>
 
-<section>
+<section id="tr">
   <span class="lang">Türkçe</span>
   <h2>Gizlilik Politikası</h2>
 
-  <div class="big">Bu uygulama hiçbir kişisel veri toplamaz, saklamaz veya paylaşmaz.</div>
+  <p><strong>Uygulama:</strong> Geldim Bile (Android ve iOS, <code>com.miracdev.geldimbile</code>)<br>
+  <strong>Geliştirici (veri sorumlusu):</strong> Mehmet Miraç Arık<br>
+  <strong>İletişim:</strong> <a href="mailto:fezainnovation@gmail.com">fezainnovation@gmail.com</a></p>
 
-  <p>Geldim Bile tamamen çevrimdışı çalışır. İnternet bağlantısı istemez, hiçbir
-  sunucuya veri göndermez, hesap açmanızı istemez, reklam göstermez ve uygulama
-  içi satın alma içermez.</p>
-
-  <h3>Toplanan veriler</h3>
-  <p>Hiçbiri. Uygulama şunları <strong>toplamaz</strong>:</p>
+  <h3>Kısaca</h3>
   <ul>
-    <li>Ad, e-posta, telefon numarası veya başka kimlik bilgisi</li>
-    <li>Konum bilgisi</li>
-    <li>Kişi listesi, fotoğraf, dosya veya takvim</li>
-    <li>Cihaz kimliği veya reklam kimliği</li>
-    <li>Kullanım istatistiği, analitik veya çökme raporu</li>
+    <li>Oyunu <strong>hesapsız (misafir)</strong> oynayabilirsin: o zaman hiçbir veri cihazından çıkmaz.</li>
+    <li><strong>Google ya da Apple ile giriş yaparsan</strong> ilerlemen sunucumuzda saklanır; günlük ödül, kurye firması,
+      haftalık sıralama ve çevrimiçi odalar açılır.</li>
+    <li>Reklam, analitik, çökme raporu ve izleme <strong>yok</strong>. Verini satmayız, reklam için kullanmayız.</li>
+    <li>Hesabını istediğin an oyunun içinden silebilirsin.</li>
   </ul>
 
-  <h3>Cihazınızda saklananlar</h3>
-  <p>Oyun ilerlemeniz <strong>yalnızca kendi cihazınızda</strong> tutulur:
-  paranız, teslimat sayınız, müşteri puanınız, satın aldığınız motosikletler ve
-  geliştirmeler, günlük görev ilerlemeniz, başarımlarınız ve ses/titreşim/
-  direksiyon tercihleriniz.</p>
-  <p>Bu bilgiler Android'in uygulamaya ayırdığı özel klasörde durur ve hiçbir yere
-  gönderilmez. <strong>Uygulamayı silerseniz bu veriler de silinir.</strong></p>
+  <h3>Giriş yaptığında toplanan veriler</h3>
+  <div class="tablo"><table>
+    <tr><th>Veri</th><th>Neden</th><th>Nerede</th></tr>
+    <tr><td>Hesap kimliği (Firebase kullanıcı kimliği)</td><td>Seni tanımak, ilerlemeni hesabına bağlamak</td><td>Google Firebase Authentication</td></tr>
+    <tr><td>E-posta adresi ve Google profil adı (<strong>yalnız Google ile girişte</strong>)</td><td>Google girişinin bir parçası olarak Firebase'e gelir; oyunda gösterilmez</td><td>Google Firebase Authentication</td></tr>
+    <tr><td>Apple ile girişte</td><td>Apple'dan ad ya da e-posta <strong>istemeyiz</strong>; yalnız Apple'ın verdiği kullanıcı kimliği</td><td>Google Firebase Authentication</td></tr>
+    <tr><td>Kullanıcı adı (senin seçtiğin)</td><td>Haftalık sıralamada ve çevrimiçi odalarda <strong>diğer oyunculara görünür</strong></td><td>Google Cloud Firestore</td></tr>
+    <tr><td>Oyun ilerlemesi (para, seviye, teslimatlar, motorlar, kıyafetler, ev, kurye firması ve adı, günlük ödül serisi), sipariş ve işlem kayıtları, oyun ayarların</td><td>Bulut kaydı, hile önleme, cihaz değiştirince ilerlemeyi geri getirmek</td><td>Google Cloud Firestore ve oyun sunucumuz</td></tr>
+    <tr><td>Haftalık sıralama satırı (kullanıcı adı, teslimat sayısı, rozet)</td><td>Sıralama — <strong>herkese açık</strong></td><td>Google Cloud Firestore</td></tr>
+    <tr><td>Çevrimiçi odada oyun içi konumun ve görünümün (motor, kıyafet)</td><td>Aynı odadaki oyunculara seni göstermek; <strong>kalıcı saklanmaz</strong></td><td>Oyun sunucusunun belleği</td></tr>
+    <tr><td>IP adresi ve teknik günlük kayıtları</td><td>Güvenlik, kötüye kullanımı önleme, hata ayıklama</td><td>Oyun sunucusu (en çok 14 gün)</td></tr>
+  </table></div>
+  <p>Gerçek (GPS) konumunu, kişilerini, fotoğraflarını ve mikrofonunu <strong>kullanmayız</strong>. Oyundaki "konum" yalnız
+  oyun şehrindeki koordinattır.</p>
+
+  <h3>Cihazında kalanlar</h3>
+  <p>Misafir ilerlemesi, ayarlar ve oturum bilgisi uygulamanın kendi klasöründe durur. Uygulamayı silince bunlar da silinir.</p>
 
   <h3>İzinler</h3>
-  <table>
-    <tr><th>İzin</th><td>Neden</td></tr>
-    <tr>
-      <th><code>VIBRATE</code><br>(Titreşim)</th>
-      <td>Çarpma ve teslimat anında kısa titreşim geri bildirimi.
-          Oyun içi ayarlardan kapatılabilir.</td>
-    </tr>
-  </table>
-  <p>Uygulama <strong>internet izni bile istemez</strong>; ağ bağlantısı kuramaz.</p>
+  <p>Android'de yalnız <code>INTERNET</code> (giriş, bulut kaydı ve çevrimiçi mod için) ve <code>VIBRATE</code> (titreşim;
+  ayarlardan kapatılabilir) izinleri istenir.</p>
 
-  <h3>Üçüncü taraf hizmetler</h3>
-  <p>Uygulama hiçbir üçüncü taraf analitik aracı, reklam ağı, bulut hizmeti veya
-  izleme SDK'sı kullanmaz.</p>
-  <p>İçerikte açık lisanslı varlıklar kullanılmıştır (Kenney — CC0 lisanslı 3B
-  modeller ve ses efektleri; TrailRenderer ve Virtual Joystick — MIT lisanslı).
-  Bunlar yalnızca oyunun görsel ve işitsel içeriğidir; veri toplamazlar.</p>
+  <h3>Hizmet sağlayıcılar</h3>
+  <ul>
+    <li><strong>Google Firebase / Google Cloud</strong> (giriş ve veri tabanı) — veri bölgesi: Google Cloud europe-west3
+      (Frankfurt, Almanya)</li>
+    <li><strong>Hostinger</strong> (oyun sunucumuzun barındığı sanal sunucu) — konum: Frankfurt, Almanya</li>
+    <li><strong>Google Sign-In</strong> ve <strong>Sign in with Apple</strong> (giriş)</li>
+  </ul>
+  <p>Bu sağlayıcılar veriyi yalnız bizim adımıza, hizmeti çalıştırmak için işler. Verini başka hiçbir üçüncü tarafla
+  paylaşmayız ve satmayız; yasal zorunluluk hâli saklıdır.</p>
 
-  <h3>Çocukların gizliliği</h3>
-  <p>Uygulama 13 yaş altı çocuklara yönelik tasarlanmamıştır ve hiçbir yaş
-  grubundan veri toplamaz.</p>
+  <h3>Güvenlik</h3>
+  <p>Bütün bağlantılar şifrelidir (HTTPS / WSS). Para ve ilerleme gibi oyuncu verilerini yalnız sunucu yazar; uygulama veri
+  tabanında kurallarla kısıtlıdır.</p>
+
+  <h3>Saklama ve silme</h3>
+  <p>Verilerin hesabın açık kaldıkça saklanır. <strong>Hesabını silmek için:</strong> oyunda Ayarlar → HESAP → Çıkış →
+  Hesabı sil (hemen gerçekleşir) ya da <a href="hesap-sil.html">hesap silme sayfası</a>. Silinen ve tutulan veriler o
+  sayfada yazar (kullanıcı adın başkası alamasın diye kilitli kalır ama seninle bağı koparılır).</p>
+
+  <h3>Hakların</h3>
+  <p>Verilerine erişmek, düzeltmek, silmek ya da işlenmesine itiraz etmek için
+  <a href="mailto:fezainnovation@gmail.com">fezainnovation@gmail.com</a> adresine yazabilirsin. Hukuki dayanak: hesap ve oyun
+  hizmeti için sözleşmenin ifası, güvenlik günlükleri için meşru menfaat. Yerel veri koruma otoritesine (Türkiye'de KVKK,
+  AB'de bulunduğun ülkenin otoritesi) şikâyet hakkın saklıdır.</p>
+
+  <h3>Çocuklar</h3>
+  <p>Oyun 13 yaş altı çocuklara yönelik değildir; bilerek 13 yaş altından veri toplamayız.</p>
 
   <h3>Değişiklikler</h3>
-  <p>Bu politika güncellenirse yukarıdaki tarih değişir. Veri toplama davranışı
-  değişirse uygulama güncellemesiyle birlikte açıkça duyurulur.</p>
+  <p>Politika değişirse bu sayfadaki tarih güncellenir; veri toplama değişirse uygulama güncellemesiyle birlikte duyurulur.</p>
 
-  <h3>İletişim</h3>
-  <p>Sorularınız için: <a href="mailto:mehmetmiracarik@gmail.com">mehmetmiracarik@gmail.com</a></p>
+  <h3>İçerik ve lisanslar (bilgi)</h3>
+  <p>Oyun; Kenney (CC0) ve poly.pizza 3B modelleri, ElevenLabs ile üretilmiş sesler, Meshy ile üretilmiş bazı 3B modeller ve
+  MIT lisanslı eklentiler içerir. Bunlar oyunun içeriğidir, veri toplamaz.</p>
 </section>
 
-<section>
+<section id="en">
   <span class="lang">English</span>
   <h2>Privacy Policy</h2>
 
-  <div class="big">This app does not collect, store, or share any personal data.</div>
+  <p><strong>App:</strong> Geldim Bile (Android and iOS, <code>com.miracdev.geldimbile</code>)<br>
+  <strong>Developer (data controller):</strong> Mehmet Miraç Arık<br>
+  <strong>Contact:</strong> <a href="mailto:fezainnovation@gmail.com">fezainnovation@gmail.com</a></p>
 
-  <p>Geldim Bile runs entirely offline. It requires no internet connection, sends
-  nothing to any server, requires no account, shows no ads, and contains no
-  in-app purchases.</p>
-
-  <h3>Data collected</h3>
-  <p>None. The app does <strong>not</strong> collect:</p>
+  <h3>In short</h3>
   <ul>
-    <li>Name, email, phone number, or any identifier</li>
-    <li>Location data</li>
-    <li>Contacts, photos, files, or calendar</li>
-    <li>Device ID or advertising ID</li>
-    <li>Usage analytics or crash reports</li>
+    <li>You can play as a <strong>guest</strong> with no account — then no data leaves your device.</li>
+    <li>If you <strong>sign in with Google or Apple</strong>, your progress is stored on our server and the daily reward,
+      courier company, weekly leaderboard and online rooms unlock.</li>
+    <li>No ads, analytics, crash reporting or tracking. We never sell your data or use it for advertising.</li>
+    <li>You can delete your account in the game at any time.</li>
   </ul>
 
+  <h3>Data collected when you sign in</h3>
+  <div class="tablo"><table>
+    <tr><th>Data</th><th>Why</th><th>Where</th></tr>
+    <tr><td>Account ID (Firebase user ID)</td><td>To recognise you and link your progress to your account</td><td>Google Firebase Authentication</td></tr>
+    <tr><td>Email address and Google profile name (<strong>Google sign-in only</strong>)</td><td>Received by Firebase as part of Google sign-in; never shown in the game</td><td>Google Firebase Authentication</td></tr>
+    <tr><td>Sign in with Apple</td><td>We request <strong>no</strong> name or email from Apple; only Apple's user identifier</td><td>Google Firebase Authentication</td></tr>
+    <tr><td>Your chosen username</td><td><strong>Visible to other players</strong> on the weekly leaderboard and in online rooms</td><td>Google Cloud Firestore</td></tr>
+    <tr><td>Game progress (money, level, deliveries, bikes, outfits, home, courier company and its name, daily reward streak), order and transaction records, game settings</td><td>Cloud save, cheat prevention, restoring progress on a new device</td><td>Google Cloud Firestore and our game server</td></tr>
+    <tr><td>Weekly leaderboard entry (username, deliveries, badges)</td><td>Leaderboard — <strong>public</strong></td><td>Google Cloud Firestore</td></tr>
+    <tr><td>Your in-game position and look (bike, outfit) in online rooms</td><td>Showing you to players in the same room; <strong>not stored</strong></td><td>Game server memory</td></tr>
+    <tr><td>IP address and technical logs</td><td>Security, abuse prevention, debugging</td><td>Game server (kept at most 14 days)</td></tr>
+  </table></div>
+  <p>We do <strong>not</strong> use your real (GPS) location, contacts, photos or microphone. "Location" in the game is only
+  a coordinate in the game city.</p>
+
   <h3>Stored on your device</h3>
-  <p>Your game progress is kept <strong>only on your own device</strong>: money,
-  delivery count, customer rating, purchased motorcycles and upgrades, daily
-  quest progress, achievements, and your sound/vibration/steering preferences.</p>
-  <p>This data lives in the app's private Android storage and is never
-  transmitted. <strong>Uninstalling the app deletes it.</strong></p>
+  <p>Guest progress, settings and session data stay in the app's own folder and are removed when you uninstall the app.</p>
 
   <h3>Permissions</h3>
-  <table>
-    <tr><th>Permission</th><td>Purpose</td></tr>
-    <tr>
-      <th><code>VIBRATE</code></th>
-      <td>Short haptic feedback on collisions and deliveries.
-          Can be disabled in the in-game settings.</td>
-    </tr>
-  </table>
-  <p>The app does <strong>not even request internet access</strong>; it cannot
-  make network connections.</p>
+  <p>On Android the app requests only <code>INTERNET</code> (sign-in, cloud save and online mode) and <code>VIBRATE</code>
+  (haptics; can be turned off in the settings).</p>
 
-  <h3>Third-party services</h3>
-  <p>The app uses no third-party analytics, ad networks, cloud services, or
-  tracking SDKs. Open-licensed content is included (Kenney — CC0 3D models and
-  sound effects; TrailRenderer and Virtual Joystick — MIT). These are content
-  only and collect no data.</p>
+  <h3>Service providers</h3>
+  <ul>
+    <li><strong>Google Firebase / Google Cloud</strong> (sign-in, database) — data region: Google Cloud europe-west3
+      (Frankfurt, Germany)</li>
+    <li><strong>Hostinger</strong> (virtual server hosting our game server) — location: Frankfurt, Germany</li>
+    <li><strong>Google Sign-In</strong> and <strong>Sign in with Apple</strong> (sign-in)</li>
+  </ul>
+  <p>They process data only on our behalf to run the service. We do not share your data with any other third party and never
+  sell it, except where required by law.</p>
 
-  <h3>Children's privacy</h3>
-  <p>The app is not directed at children under 13 and collects no data from users
-  of any age.</p>
+  <h3>Security</h3>
+  <p>All connections are encrypted (HTTPS / WSS). Player data such as money and progress is written only by the server; the app
+  is restricted by database rules.</p>
+
+  <h3>Retention and deletion</h3>
+  <p>Your data is kept while your account exists. <strong>To delete it:</strong> in the game go to Settings → ACCOUNT → Sign
+  out → Delete account (immediate), or see the <a href="hesap-sil.html#en">account deletion page</a>. It lists what is deleted
+  and what is kept (your username stays locked so nobody else can take it, but is unlinked from you).</p>
+
+  <h3>Your rights</h3>
+  <p>To access, correct or delete your data, or to object to its processing, email
+  <a href="mailto:fezainnovation@gmail.com">fezainnovation@gmail.com</a>. Legal basis: performance of a contract for the account
+  and game service, legitimate interest for security logs. You may also complain to your local data protection authority.</p>
+
+  <h3>Children</h3>
+  <p>The game is not directed at children under 13 and we do not knowingly collect their data.</p>
 
   <h3>Changes</h3>
-  <p>If this policy changes, the date above will be updated. Any change in data
-  handling will be announced with the corresponding app update.</p>
+  <p>If this policy changes, the date above is updated; changes to data collection are announced with an app update.</p>
 
-  <h3>Contact</h3>
-  <p><a href="mailto:mehmetmiracarik@gmail.com">mehmetmiracarik@gmail.com</a></p>
+  <h3>Content and licences (information)</h3>
+  <p>The game contains Kenney (CC0) and poly.pizza 3D models, sounds generated with ElevenLabs, some 3D models generated with
+  Meshy and MIT-licensed plugins. These are game content and collect no data.</p>
 </section>
 
 <footer>
   Geldim Bile - Motokurye &middot; <code>com.miracdev.geldimbile</code><br>
-  Geliştirici / Developer: Mehmet Miraç Arık
+  Geliştirici / Developer: Mehmet Miraç Arık &middot; <a href="mailto:fezainnovation@gmail.com">fezainnovation@gmail.com</a>
 </footer>
 
 </div>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geldim Bile — Hesabını sil / Delete your account</title>
+<meta name="description" content="Geldim Bile hesabını ve oyun verilerini silme: oyunun içinden hemen ya da e-postayla. Silinen ve tutulan veriler.">
+<style>
+  :root{
+    --bg:#faf9f5; --fg:#1f2430; --muted:#5a6472; --line:#e2e0d8;
+    --card:#ffffff; --accent:#ed7d31; --accent-soft:#fff4ec;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#14171d; --fg:#e8e6e1; --muted:#9aa3b2; --line:#2a2f39;
+           --card:#1b1f27; --accent:#f0982f; --accent-soft:#2a2118; }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    padding:24px 16px 64px;
+  }
+  .wrap{max-width:760px;margin:0 auto}
+  header{
+    background:var(--accent-soft); border:1px solid var(--line);
+    border-radius:16px; padding:24px; margin-bottom:28px;
+  }
+  h1{margin:0 0 6px; font-size:26px; line-height:1.25}
+  .sub{color:var(--muted); font-size:14px; margin:0}
+  .pkg{
+    display:inline-block; margin-top:12px; padding:4px 10px;
+    background:var(--card); border:1px solid var(--line); border-radius:8px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13px;
+  }
+  nav{margin-top:14px; font-size:14px}
+  section{
+    background:var(--card); border:1px solid var(--line);
+    border-radius:16px; padding:22px 24px; margin-bottom:18px;
+  }
+  h2{font-size:20px; margin:0 0 4px; padding-bottom:8px; border-bottom:2px solid var(--accent)}
+  h3{font-size:16px; margin:22px 0 6px; color:var(--muted)}
+  .big{
+    font-size:17px; font-weight:600; background:var(--accent-soft);
+    border-left:4px solid var(--accent); border-radius:8px; padding:14px 16px; margin:16px 0;
+  }
+  ol,ul{padding-left:22px; margin:10px 0}
+  li{margin:5px 0}
+  a{color:var(--accent)}
+  footer{color:var(--muted); font-size:13px; text-align:center; margin-top:28px; line-height:1.8}
+  .lang{
+    display:inline-block; font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:3px 10px; margin-bottom:14px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Geldim Bile — Motokurye</h1>
+  <p class="sub">Hesabını ve verilerini sil &middot; Delete your account and data</p>
+  <p class="sub">Geliştirici / Developer: <strong>Mehmet Miraç Arık</strong> &middot;
+    <a href="mailto:fezainnovation@gmail.com">fezainnovation@gmail.com</a></p>
+  <span class="pkg">com.miracdev.geldimbile</span>
+  <nav><a href="#tr">Türkçe</a> &middot; <a href="#en">English</a> &middot; <a href="./">Gizlilik politikası / Privacy policy</a></nav>
+</header>
+
+<section id="tr">
+  <span class="lang">Türkçe</span>
+  <h2>Geldim Bile hesabını sil</h2>
+
+  <h3>1. Oyunun içinden (önerilen, hemen gerçekleşir)</h3>
+  <ol>
+    <li>Geldim Bile'yi aç; hesabınla giriş yapmış ol.</li>
+    <li><strong>Ayarlar → HESAP</strong> bölümündeki <strong>Çıkış</strong> düğmesine dokun (satırın adı Android'de
+      "Google Hesabı", iPhone / iPad'de "Hesap").</li>
+    <li>Açılan pencerede <strong>Hesabı sil</strong>'e dokun ve onayla.</li>
+  </ol>
+  <div class="big">Hesabın ve sunucudaki bütün oyun verilerin hemen silinir; cihaz misafir kaydına döner.</div>
+
+  <h3>2. Oyun kurulu değilse (e-postayla)</h3>
+  <p><a href="mailto:fezainnovation@gmail.com?subject=Geldim%20Bile%20hesap%20silme">fezainnovation@gmail.com</a> adresine
+  <strong>"Geldim Bile hesap silme"</strong> konulu bir e-posta gönder: kullanıcı adını ve giriş yöntemini (Google / Apple)
+  yaz; Google ile girdiysen e-postayı o hesabın adresinden gönder. Kimliğin doğrulandıktan sonra hesabın
+  <strong>en geç 30 gün</strong> içinde silinir ve sana e-postayla bilgi verilir.</p>
+
+  <h3>Silinenler</h3>
+  <ul>
+    <li>Giriş kaydın (Firebase Authentication: kullanıcı kimliği; Google ile girdiysen e-posta adresi ve profil adı)</li>
+    <li>Oyuncu profilin ve bütün oyun ilerlemen (para, seviye, motorlar, kıyafetler, ev, kurye firması, günlük ödül serisi)</li>
+    <li>Sipariş ve işlem kayıtların</li>
+    <li>Haftalık sıralamadaki bütün satırların</li>
+  </ul>
+
+  <h3>Tutulanlar</h3>
+  <ul>
+    <li><strong>Kullanıcı adı rezervasyonu:</strong> adın başkası tarafından alınamaması için kilitli kalır, ama seninle
+      (hesap kimliğinle) bağı tamamen koparılır.</li>
+    <li><strong>Geçmiş haftaların kazanan listeleri:</strong> senin girdin listeden çıkarılır; listenin kendisi (başkalarının
+      sıraları) kalır.</li>
+    <li><strong>Teknik sunucu günlükleri</strong> (IP adresi ve kullanıcı kimliği içerebilir): yalnız güvenlik ve hata ayıklama
+      için tutulur; en çok 14 gün sonra kendiliğinden silinir.</li>
+  </ul>
+  <p>Cihazındaki misafir kaydı (hesapsız oynadığın ilerleme) yalnız telefonunda durur; oyunu silince o da silinir.</p>
+</section>
+
+<section id="en">
+  <span class="lang">English</span>
+  <h2>Delete your Geldim Bile account</h2>
+
+  <h3>1. In the game (recommended, immediate)</h3>
+  <ol>
+    <li>Open Geldim Bile while signed in to your account.</li>
+    <li>In <strong>Settings → ACCOUNT</strong>, tap <strong>Sign out</strong> (the row is called "Google Account" on Android
+      and "Account" on iPhone / iPad).</li>
+    <li>In the window that opens, tap <strong>Delete account</strong> and confirm.</li>
+  </ol>
+  <div class="big">Your account and all of your game data on our server are deleted right away; the device returns to its guest save.</div>
+
+  <h3>2. If the game is not installed (by email)</h3>
+  <p>Email <a href="mailto:fezainnovation@gmail.com?subject=Geldim%20Bile%20account%20deletion">fezainnovation@gmail.com</a>
+  with the subject <strong>"Geldim Bile account deletion"</strong>, including your username and how you signed in (Google /
+  Apple); if you used Google, send it from that account's address. After we verify it is you, your account is deleted
+  <strong>within 30 days</strong> and we confirm by email.</p>
+
+  <h3>What is deleted</h3>
+  <ul>
+    <li>Your sign-in record (Firebase Authentication: user ID; for Google sign-in, also your email address and profile name)</li>
+    <li>Your player profile and all game progress (money, level, bikes, outfits, home, courier company, daily reward streak)</li>
+    <li>Your order and transaction records</li>
+    <li>All of your weekly leaderboard entries</li>
+  </ul>
+
+  <h3>What is kept</h3>
+  <ul>
+    <li><strong>Username reservation:</strong> stays locked so nobody else can take it, but is completely unlinked from you
+      (your account ID).</li>
+    <li><strong>Past weekly winner lists:</strong> your entry is removed; the list itself (other players' ranks) stays.</li>
+    <li><strong>Technical server logs</strong> (may contain IP address and user ID): kept only for security and debugging;
+      deleted automatically after at most 14 days.</li>
+  </ul>
+  <p>The guest save on your device (progress made without an account) stays only on your phone and is removed when you
+  uninstall the game.</p>
+</section>
+
+<footer>
+  Geldim Bile - Motokurye &middot; <code>com.miracdev.geldimbile</code><br>
+  Geliştirici / Developer: Mehmet Miraç Arık &middot; <a href="mailto:fezainnovation@gmail.com">fezainnovation@gmail.com</a>
+</footer>
+
+</div>
+</body>
+</html>
