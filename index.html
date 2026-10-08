@@ -63,9 +63,9 @@
 <header>
   <h1>Geldim Bile — Motokurye</h1>
   <p class="sub">Gizlilik Politikası &middot; Privacy Policy</p>
-  <p class="sub">Son güncelleme / Last updated: <strong>6 Ekim 2026 / October 6, 2026</strong></p>
+  <p class="sub">Son güncelleme / Last updated: <strong>8 Ekim 2026 / October 8, 2026</strong></p>
   <span class="pkg">com.miracdev.geldimbile</span>
-  <nav><a href="#tr">Türkçe</a> &middot; <a href="#en">English</a> &middot; <a href="hesap-sil.html">Hesabını sil / Delete your account</a></nav>
+  <nav><a href="#tr">Türkçe</a> &middot; <a href="#en">English</a> &middot; <a href="kosullar">Kullanım Koşulları / Terms of Use</a> &middot; <a href="hesap-sil.html">Hesabını sil / Delete your account</a></nav>
 </header>
 
 <section id="tr">
@@ -95,13 +95,14 @@
     <tr><td>Oyun ilerlemesi (para, seviye, teslimatlar, motorlar, kıyafetler, ev, kurye firması ve adı, günlük ödül serisi), sipariş ve işlem kayıtları, oyun ayarların</td><td>Bulut kaydı, hile önleme, cihaz değiştirince ilerlemeyi geri getirmek</td><td>Google Cloud Firestore ve oyun sunucumuz</td></tr>
     <tr><td>Haftalık sıralama satırı (kullanıcı adı, teslimat sayısı, rozet)</td><td>Sıralama — <strong>herkese açık</strong></td><td>Google Cloud Firestore</td></tr>
     <tr><td>Çevrimiçi odada oyun içi konumun ve görünümün (motor, kıyafet)</td><td>Aynı odadaki oyunculara seni göstermek; <strong>kalıcı saklanmaz</strong></td><td>Oyun sunucusunun belleği</td></tr>
+    <tr><td>Oyuncu bildirimleri: bildirdiğin oyuncunun kimliği ve kullanıcı adı, sebep (listeden: uygunsuz ad / rahatsız edici / hile / diğer - serbest metin yok), yer (oda adı ya da sıralama), zaman ve senin hesap kimliğin</td><td>Kötüye kullanımı incelemek ve gerekirse hesabı kapatmak (en geç 24 saat içinde incelenir)</td><td>Google Cloud Firestore - yalnız sunucu okur; senin gönderdiğin ve senin hakkındaki bildirimler hesabını silince silinir</td></tr>
     <tr><td>IP adresi ve teknik günlük kayıtları</td><td>Güvenlik, kötüye kullanımı önleme, hata ayıklama</td><td>Oyun sunucusu (en çok 14 gün)</td></tr>
   </table></div>
   <p>Gerçek (GPS) konumunu, kişilerini, fotoğraflarını ve mikrofonunu <strong>kullanmayız</strong>. Oyundaki "konum" yalnız
   oyun şehrindeki koordinattır.</p>
 
   <h3>Cihazında kalanlar</h3>
-  <p>Misafir ilerlemesi, ayarlar ve oturum bilgisi uygulamanın kendi klasöründe durur. Uygulamayı silince bunlar da silinir.</p>
+  <p>Misafir ilerlemesi, ayarlar ve oturum bilgisi uygulamanın kendi klasöründe durur. Engellediğin oyuncuların listesi de yalnız bu cihazda durur; sunucuya gönderilmez. Uygulamayı silince bunlar da silinir.</p>
 
   <h3>İzinler</h3>
   <p>Android'de yalnız <code>INTERNET</code> (giriş, bulut kaydı ve çevrimiçi mod için) ve <code>VIBRATE</code> (titreşim;
@@ -122,9 +123,16 @@
   tabanında kurallarla kısıtlıdır.</p>
 
   <h3>Saklama ve silme</h3>
-  <p>Verilerin hesabın açık kaldıkça saklanır. <strong>Hesabını silmek için:</strong> oyunda Ayarlar → HESAP → Çıkış →
-  Hesabı sil (hemen gerçekleşir) ya da <a href="hesap-sil.html">hesap silme sayfası</a>. Silinen ve tutulan veriler o
-  sayfada yazar (kullanıcı adın başkası alamasın diye kilitli kalır ama seninle bağı koparılır).</p>
+  <p>Verilerin hesabın açık kaldıkça saklanır. <strong>Hesabını silmek için:</strong> oyunda Ayarlar → HESAP → Yönet (eski
+  sürümlerde Çıkış) → Hesabı sil (hemen gerçekleşir) ya da <a href="hesap-sil.html">hesap silme sayfası</a>. Silinen ve
+  tutulan veriler o sayfada yazar (kullanıcı adın başkası alamasın diye kilitli kalır ama seninle bağı koparılır). Apple ile
+  açtığın hesabı silerken Apple'dan tek kullanımlık bir onay kodu istenir; sunucu onunla Apple'daki "Apple ile Giriş"
+  bağlantını iptal eder (kod saklanmaz).</p>
+
+  <h3>Davranış kuralları</h3>
+  <p><a href="kosullar">Kullanım Koşulları</a> geçerlidir. Uygunsuz kullanıcı adı ve rahatsız edici davranış yasaktır;
+  oyuncuları oyunun içinden (Duraklat → OYUNCULAR) bildirebilir ve engelleyebilirsin. Bildirimler en geç 24 saat içinde
+  incelenir; kuralları çiğneyen hesap kapatılır.</p>
 
   <h3>Hakların</h3>
   <p>Verilerine erişmek, düzeltmek, silmek ya da işlenmesine itiraz etmek için
@@ -170,13 +178,14 @@
     <tr><td>Game progress (money, level, deliveries, bikes, outfits, home, courier company and its name, daily reward streak), order and transaction records, game settings</td><td>Cloud save, cheat prevention, restoring progress on a new device</td><td>Google Cloud Firestore and our game server</td></tr>
     <tr><td>Weekly leaderboard entry (username, deliveries, badges)</td><td>Leaderboard — <strong>public</strong></td><td>Google Cloud Firestore</td></tr>
     <tr><td>Your in-game position and look (bike, outfit) in online rooms</td><td>Showing you to players in the same room; <strong>not stored</strong></td><td>Game server memory</td></tr>
+    <tr><td>Player reports: the reported player's ID and username, the reason (from a list: inappropriate name / harassment / cheating / other - no free text), where (room name or leaderboard), time and your account ID</td><td>To review abuse and close accounts when needed (reviewed within 24 hours)</td><td>Google Cloud Firestore - read only by the server; reports you sent and reports about you are deleted when you delete your account</td></tr>
     <tr><td>IP address and technical logs</td><td>Security, abuse prevention, debugging</td><td>Game server (kept at most 14 days)</td></tr>
   </table></div>
   <p>We do <strong>not</strong> use your real (GPS) location, contacts, photos or microphone. "Location" in the game is only
   a coordinate in the game city.</p>
 
   <h3>Stored on your device</h3>
-  <p>Guest progress, settings and session data stay in the app's own folder and are removed when you uninstall the app.</p>
+  <p>Guest progress, settings and session data stay in the app's own folder. Your list of blocked players also stays only on this device and is never sent to the server. All of this is removed when you uninstall the app.</p>
 
   <h3>Permissions</h3>
   <p>On Android the app requests only <code>INTERNET</code> (sign-in, cloud save and online mode) and <code>VIBRATE</code>
@@ -197,9 +206,16 @@
   is restricted by database rules.</p>
 
   <h3>Retention and deletion</h3>
-  <p>Your data is kept while your account exists. <strong>To delete it:</strong> in the game go to Settings → ACCOUNT → Sign
-  out → Delete account (immediate), or see the <a href="hesap-sil.html#en">account deletion page</a>. It lists what is deleted
-  and what is kept (your username stays locked so nobody else can take it, but is unlinked from you).</p>
+  <p>Your data is kept while your account exists. <strong>To delete it:</strong> in the game go to Settings → ACCOUNT → Manage
+  (Sign out in older versions) → Delete account (immediate), or see the <a href="hesap-sil.html#en">account deletion page</a>.
+  It lists what is deleted and what is kept (your username stays locked so nobody else can take it, but is unlinked from you).
+  When you delete an account created with Apple, the app asks Apple for a one-time authorization code; the server uses it to
+  revoke the app's "Sign in with Apple" link (the code is not stored).</p>
+
+  <h3>Conduct</h3>
+  <p>The <a href="kosullar#en">Terms of Use</a> apply. Offensive usernames and harassment are not allowed; you can report and
+  block players in the game (Pause → PLAYERS). Reports are reviewed within 24 hours; accounts that break the rules are
+  closed.</p>
 
   <h3>Your rights</h3>
   <p>To access, correct or delete your data, or to object to its processing, email
