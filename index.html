@@ -63,7 +63,7 @@
 <header>
   <h1>Geldim Bile — Motokurye</h1>
   <p class="sub">Gizlilik Politikası &middot; Privacy Policy</p>
-  <p class="sub">Son güncelleme / Last updated: <strong>14 Ekim 2026 / October 14, 2026</strong></p>
+  <p class="sub">Son güncelleme / Last updated: <strong>25 Kasım 2026 / November 25, 2026</strong></p>
   <span class="pkg">com.miracdev.geldimbile</span>
   <nav><a href="#tr">Türkçe</a> &middot; <a href="#en">English</a> &middot; <a href="kosullar">Kullanım Koşulları / Terms of Use</a> &middot; <a href="hesap-sil.html">Hesabını sil / Delete your account</a></nav>
 </header>
@@ -82,6 +82,8 @@
     <li><strong>Google ya da Apple ile giriş yaparsan</strong> ilerlemen sunucumuzda saklanır; günlük ödül, kurye firması,
       haftalık sıralama ve çevrimiçi odalar açılır.</li>
     <li>Reklam, analitik, çökme raporu ve izleme <strong>yok</strong>. Verini satmayız, reklam için kullanmayız.</li>
+    <li>Telefon bildirimleri <strong>isteğe bağlıdır</strong>: hatırlatmalar telefonunda kurulur; yalnız "Hediye ve duyurular"ı
+      açarsan cihazının bildirim adresi (jetonu) sunucumuza gelir.</li>
     <li>Hesabını istediğin an oyunun içinden silebilirsin.</li>
   </ul>
 
@@ -97,12 +99,18 @@
     <tr><td>Çevrimiçi odada oyun içi konumun ve görünümün (motor, kıyafet)</td><td>Aynı odadaki oyunculara seni göstermek; <strong>kalıcı saklanmaz</strong></td><td>Oyun sunucusunun belleği</td></tr>
     <tr><td>Oyuncu bildirimleri: bildirdiğin oyuncunun kimliği ve kullanıcı adı, sebep (listeden: uygunsuz ad / rahatsız edici / hile / diğer - serbest metin yok), yer (oda adı ya da sıralama), zaman ve senin hesap kimliğin</td><td>Kötüye kullanımı incelemek ve gerekirse hesabı kapatmak (en geç 24 saat içinde incelenir)</td><td>Google Cloud Firestore - yalnız sunucu okur; senin gönderdiğin ve senin hakkındaki bildirimler hesabını silince silinir</td></tr>
     <tr><td>IP adresi ve teknik günlük kayıtları</td><td>Güvenlik, kötüye kullanımı önleme, hata ayıklama</td><td>Oyun sunucusu (en çok 14 gün)</td></tr>
+    <tr><td>Bildirim jetonu (<strong>yalnız Ayarlar → Bildirimler → "Hediye ve duyurular" açıksa</strong>): cihazının anlık bildirim
+      adresi, platform (Android / iOS), oyun dilin ve bu seçimin</td><td>Gelen kutuna hediye ya da duyuru koyduğumuzda telefonuna haber
+      vermek; reklam ya da başka bir amaç için kullanılmaz</td><td>Google Cloud Firestore; bildirimi Android'de Google Firebase Cloud
+      Messaging, iPhone'da Apple Push Notification service iletir</td></tr>
   </table></div>
   <p>Gerçek (GPS) konumunu, kişilerini, fotoğraflarını ve mikrofonunu <strong>kullanmayız</strong>. Oyundaki "konum" yalnız
   oyun şehrindeki koordinattır.</p>
 
   <h3>Cihazında kalanlar</h3>
-  <p>Misafir ilerlemesi, ayarlar ve oturum bilgisi uygulamanın kendi klasöründe durur. Engellediğin oyuncuların listesi de yalnız bu cihazda durur; sunucuya gönderilmez. Uygulamayı silince bunlar da silinir.</p>
+  <p>Misafir ilerlemesi, ayarlar ve oturum bilgisi uygulamanın kendi klasöründe durur. Engellediğin oyuncuların listesi de yalnız bu cihazda durur; sunucuya gönderilmez. Uygulamayı silince bunlar da silinir.
+  Hatırlatma bildirimleri (günlük ödül hazır, firma kasası doldu, haftalık sıralama bitiyor) telefonunun kendi bildirim sisteminde
+  kurulur; bunun için sunucuya veri gitmez.</p>
 
   <h3>Game Center, Google Play Games ve yayın</h3>
   <p>iPhone ve iPad'de oyun isteğe bağlı olarak Apple'ın <strong>Game Center</strong> hizmetine bağlanır: Game Center'a giriş
@@ -121,8 +129,12 @@
   kayıt ve yayınların görüntüsü bize gelmez.</p>
 
   <h3>İzinler</h3>
-  <p>Android'de yalnız <code>INTERNET</code> (giriş, bulut kaydı ve çevrimiçi mod için) ve <code>VIBRATE</code> (titreşim;
-  ayarlardan kapatılabilir) izinleri istenir.</p>
+  <p>Android'de <code>INTERNET</code> (giriş, bulut kaydı ve çevrimiçi mod için), <code>VIBRATE</code> (titreşim; ayarlardan
+  kapatılabilir) ve <code>POST_NOTIFICATIONS</code> (bildirimler; Android 13 ve sonrasında oyunun içinden sorulur, vermezsen oyun
+  yine çalışır) izinleri istenir. Bildirim altyapısı ayrıca sistem izinlerini kullanır: hatırlatmaların zamanında gelmesi ve telefon
+  yeniden başlayınca kaybolmaması için <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code>, <code>ACCESS_NETWORK_STATE</code>,
+  <code>FOREGROUND_SERVICE</code>; hediye bildirimlerini almak için Google'ın bildirim alma izni. iPhone ve iPad'de bildirim izni de
+  oyunun içinden, isteğe bağlı olarak sorulur.</p>
 
   <h3>Hizmet sağlayıcılar</h3>
   <ul>
@@ -130,6 +142,8 @@
       (Frankfurt, Almanya)</li>
     <li><strong>Hostinger</strong> (oyun sunucumuzun barındığı sanal sunucu) — konum: Frankfurt, Almanya</li>
     <li><strong>Google Sign-In</strong> ve <strong>Sign in with Apple</strong> (giriş)</li>
+    <li><strong>Google Firebase Cloud Messaging</strong> (Android) ve <strong>Apple Push Notification service</strong> (iPhone / iPad) —
+      yalnız "Hediye ve duyurular" açıksa bildirimi telefonuna iletir</li>
   </ul>
   <p>Bu sağlayıcılar veriyi yalnız bizim adımıza, hizmeti çalıştırmak için işler. Verini başka hiçbir üçüncü tarafla
   paylaşmayız ve satmayız; yasal zorunluluk hâli saklıdır.</p>
@@ -144,7 +158,8 @@
   tutulan veriler o sayfada yazar (kullanıcı adın başkası alamasın diye kilitli kalır ama seninle bağı koparılır). Apple ile
   açtığın hesabı silerken Apple'dan tek kullanımlık bir onay kodu istenir; sunucu onunla Apple'daki "Apple ile Giriş"
   bağlantını iptal eder (kod saklanmaz). Apple Hesabını silersen Apple bunu bize bildirir ve Geldim Bile hesabın da silinir;
-  Geldim Bile'nin "Apple ile Giriş" iznini kaldırırsan oturumun kapanır (verilerin silinmez).</p>
+  Geldim Bile'nin "Apple ile Giriş" iznini kaldırırsan oturumun kapanır (verilerin silinmez). "Hediye ve duyurular"ı kapatırsan
+  sana bildirim göndermeyiz; bildirim jetonun hesabını silince silinir.</p>
 
   <h3>Davranış kuralları</h3>
   <p><a href="kosullar">Kullanım Koşulları</a> geçerlidir. Uygunsuz kullanıcı adı ve rahatsız edici davranış yasaktır;
@@ -182,6 +197,8 @@
     <li>If you <strong>sign in with Google or Apple</strong>, your progress is stored on our server and the daily reward,
       courier company, weekly leaderboard and online rooms unlock.</li>
     <li>No ads, analytics, crash reporting or tracking. We never sell your data or use it for advertising.</li>
+    <li>Phone notifications are <strong>optional</strong>: reminders are scheduled on your phone; only if you turn on "Gifts and
+      announcements" does your device's notification address (token) reach our server.</li>
     <li>You can delete your account in the game at any time.</li>
   </ul>
 
@@ -197,12 +214,18 @@
     <tr><td>Your in-game position and look (bike, outfit) in online rooms</td><td>Showing you to players in the same room; <strong>not stored</strong></td><td>Game server memory</td></tr>
     <tr><td>Player reports: the reported player's ID and username, the reason (from a list: inappropriate name / harassment / cheating / other - no free text), where (room name or leaderboard), time and your account ID</td><td>To review abuse and close accounts when needed (reviewed within 24 hours)</td><td>Google Cloud Firestore - read only by the server; reports you sent and reports about you are deleted when you delete your account</td></tr>
     <tr><td>IP address and technical logs</td><td>Security, abuse prevention, debugging</td><td>Game server (kept at most 14 days)</td></tr>
+    <tr><td>Notification token (<strong>only if Settings → Notifications → "Gifts and announcements" is on</strong>): your device's
+      push address, platform (Android / iOS), game language and this choice</td><td>To tell your phone when we put a gift or an
+      announcement in your inbox; never used for advertising or anything else</td><td>Google Cloud Firestore; delivered by Google
+      Firebase Cloud Messaging on Android and Apple Push Notification service on iPhone</td></tr>
   </table></div>
   <p>We do <strong>not</strong> use your real (GPS) location, contacts, photos or microphone. "Location" in the game is only
   a coordinate in the game city.</p>
 
   <h3>Stored on your device</h3>
-  <p>Guest progress, settings and session data stay in the app's own folder. Your list of blocked players also stays only on this device and is never sent to the server. All of this is removed when you uninstall the app.</p>
+  <p>Guest progress, settings and session data stay in the app's own folder. Your list of blocked players also stays only on this device and is never sent to the server. All of this is removed when you uninstall the app.
+  Reminder notifications (daily reward ready, company till full, weekly ranking ending) are scheduled in your phone's own
+  notification system; no data is sent to the server for them.</p>
 
   <h3>Game Center, Google Play Games and streaming</h3>
   <p>On iPhone and iPad the game optionally connects to Apple's <strong>Game Center</strong>: if you are signed in to Game Center,
@@ -221,8 +244,12 @@
   app do not reach us.</p>
 
   <h3>Permissions</h3>
-  <p>On Android the app requests only <code>INTERNET</code> (sign-in, cloud save and online mode) and <code>VIBRATE</code>
-  (haptics; can be turned off in the settings).</p>
+  <p>On Android the app requests <code>INTERNET</code> (sign-in, cloud save and online mode), <code>VIBRATE</code> (haptics; can be
+  turned off in the settings) and <code>POST_NOTIFICATIONS</code> (notifications; on Android 13 and later it is asked in the game,
+  and the game works without it). The notification system also uses system permissions so reminders arrive on time and survive a
+  restart: <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code>, <code>ACCESS_NETWORK_STATE</code>,
+  <code>FOREGROUND_SERVICE</code>; and Google's permission to receive gift notifications. On iPhone and iPad, notification
+  permission is also asked in the game and is optional.</p>
 
   <h3>Service providers</h3>
   <ul>
@@ -230,6 +257,8 @@
       (Frankfurt, Germany)</li>
     <li><strong>Hostinger</strong> (virtual server hosting our game server) — location: Frankfurt, Germany</li>
     <li><strong>Google Sign-In</strong> and <strong>Sign in with Apple</strong> (sign-in)</li>
+    <li><strong>Google Firebase Cloud Messaging</strong> (Android) and <strong>Apple Push Notification service</strong> (iPhone / iPad) —
+      deliver notifications to your phone only if "Gifts and announcements" is on</li>
   </ul>
   <p>They process data only on our behalf to run the service. We do not share your data with any other third party and never
   sell it, except where required by law.</p>
@@ -245,7 +274,8 @@
   When you delete an account created with Apple, the app asks Apple for a one-time authorization code; the server uses it to
   revoke the app's "Sign in with Apple" link (the code is not stored). If you delete your Apple Account, Apple notifies us and your
   Geldim Bile account is deleted too; if you remove Geldim Bile's "Sign in with Apple" permission, you are signed out (your data is
-  kept).</p>
+  kept). If you turn off "Gifts and announcements", we stop sending you notifications; your notification token is deleted when you
+  delete your account.</p>
 
   <h3>Conduct</h3>
   <p>The <a href="kosullar#en">Terms of Use</a> apply. Offensive usernames and harassment are not allowed; you can report and
